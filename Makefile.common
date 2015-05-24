@@ -220,6 +220,9 @@ login:
 	# ${ROOT}/tools/serialdump-linux -b115200 ${ESPPORT}
 	screen ${ESPPORT} 115200
 
+release:
+	$(ROOT)/tools/release -v .version -r MINOR
+
 clean:
 	$(Q) rm -f $(APP_AR)
 	$(Q) rm -f $(TARGET_OUT)
